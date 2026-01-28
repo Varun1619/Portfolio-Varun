@@ -457,56 +457,6 @@ const Portfolio = () => {
                 )}
               </div>
             </div>
-
-            {/* Chart Builder */}
-            <div className={`bg-white rounded-2xl shadow-sm border border-slate-100 p-6 lg:col-span-2 ${sectionClass('playground')}`}>
-              <div className="flex items-center justify-between mb-6">
-                <div>
-                  <h3 className="text-xl font-bold text-slate-800">📊 Live Chart Builder</h3>
-                  <p className="text-sm text-slate-500">Click bars to modify values, switch chart types</p>
-                </div>
-                <div className="flex gap-2">
-                  {['bar', 'line', 'area'].map(type => (
-                    <button key={type} onClick={() => setChartType(type)} className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${chartType === type ? 'bg-gradient-to-r from-violet-600 to-indigo-600 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>
-                      {type === 'bar' ? '📊' : type === 'line' ? '📈' : '📉'} {type.charAt(0).toUpperCase() + type.slice(1)}
-                    </button>
-                  ))}
-                </div>
-              </div>
-              <div className="h-56 flex items-end justify-around gap-3 px-6 bg-gradient-to-b from-slate-50 to-slate-100 rounded-xl p-6">
-                {chartData.map((value, i) => (
-                  <div key={i} className="flex-1 flex flex-col items-center gap-2 max-w-16">
-                    <span className="text-xs font-bold text-violet-600">{value}</span>
-                    {chartType === 'bar' && (
-                      <div className="w-full bg-gradient-to-t from-violet-600 to-indigo-400 rounded-t-lg cursor-pointer hover:from-violet-500 hover:to-indigo-300 transition-all shadow-sm hover:shadow-md"
-                        style={{ height: `${(value / maxChartValue) * 150}px` }}
-                        onClick={() => { const newData = [...chartData]; newData[i] = Math.floor(Math.random() * 90) + 10; setChartData(newData); }}
-                      />
-                    )}
-                    {chartType === 'line' && (
-                      <div className="relative w-full h-40 flex items-end justify-center">
-                        <div className="w-4 h-4 bg-violet-600 rounded-full absolute cursor-pointer hover:scale-125 transition-transform shadow-md"
-                          style={{ bottom: `${(value / maxChartValue) * 140}px` }}
-                          onClick={() => { const newData = [...chartData]; newData[i] = Math.floor(Math.random() * 90) + 10; setChartData(newData); }}
-                        />
-                      </div>
-                    )}
-                    {chartType === 'area' && (
-                      <div className="w-full bg-gradient-to-t from-violet-600/90 to-violet-300/50 rounded-t cursor-pointer hover:from-violet-500/90 hover:to-violet-200/50 transition-all"
-                        style={{ height: `${(value / maxChartValue) * 150}px` }}
-                        onClick={() => { const newData = [...chartData]; newData[i] = Math.floor(Math.random() * 90) + 10; setChartData(newData); }}
-                      />
-                    )}
-                    <span className="text-sm font-medium text-slate-500">{['Mon','Tue','Wed','Thu','Fri','Sat','Sun'][i]}</span>
-                  </div>
-                ))}
-              </div>
-              <div className="flex gap-3 mt-4">
-                <button onClick={() => setChartData(Array.from({ length: 7 }, () => Math.floor(Math.random() * 90) + 10))} className="flex-1 py-3 bg-slate-100 hover:bg-slate-200 rounded-lg text-sm font-medium text-slate-600 transition-all">🎲 Randomize</button>
-                <button onClick={() => setChartData([30, 45, 60, 75, 90, 75, 60])} className="flex-1 py-3 bg-slate-100 hover:bg-slate-200 rounded-lg text-sm font-medium text-slate-600 transition-all">📈 Trending Up</button>
-                <button onClick={() => setChartData([90, 75, 60, 45, 30, 45, 60])} className="flex-1 py-3 bg-slate-100 hover:bg-slate-200 rounded-lg text-sm font-medium text-slate-600 transition-all">📉 Trending Down</button>
-              </div>
-            </div>
           </div>
         </div>
       </section>
