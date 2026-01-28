@@ -1,288 +1,583 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="netlify" content="true" />
-    <title>Varun Singh - Data Engineer Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Varun Singh | Data Engineer Portfolio</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.5/babel.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes slideIn { from { opacity: 0; transform: translateX(-20px); } to { opacity: 1; transform: translateX(0); } }
+    .animate-fadeIn { animation: fadeIn 0.5s ease-out forwards; }
+    .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+    .custom-scrollbar::-webkit-scrollbar-track { background: rgba(100, 116, 139, 0.1); border-radius: 3px; }
+    .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(139, 92, 246, 0.3); border-radius: 3px; }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: rgba(139, 92, 246, 0.5); }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">VS</div>
-                <div class="nav-links">
-                    <a href="#about">About</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#experience">Experience</a>
-                    <a href="#education">Education</a>
-                    <a href="#contact">Contact</a>
-                </div>
-            </nav>
-        </div>
-    </header>
-    
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Varun Singh</h1>
-                <p>Data Engineer Professional with expertise in ETL pipelines, data processing, and advanced analytics solutions.</p>
-                <a href="#contact" class="btn">Get in Touch</a>
-            </div>
-        </div>
-    </section>
-    
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-img">
-                    <img src="image.jpg" alt="placeholder">
-                </div>
-                <div class="about-text">
-                    <h3>Data Engineer Professional</h3>
-                    <p>I'm Varun Singh, a passionate Data Engineer professional with a Master's in Information Systems from Northeastern University. My expertise lies in building efficient data pipelines, leveraging data processing technologies like Apache Kafka and Spark, and creating impactful analytics solutions.</p>
-                    <p>With professional experience at LTI Mindtree and Nismotek, I've successfully delivered data-centric projects that improved operational efficiency and business outcomes. My approach combines technical expertise with business understanding to deliver insights that drive decision-making.</p>
-                    <p>I excel in designing and implementing scalable ETL pipelines, optimizing database performance, and developing data-driven applications. My technical toolkit includes Python, Java, SQL, along with modern data processing frameworks and cloud platforms.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Skills</h2>
-            <div class="skills-container">
-                <div class="skill-card">
-                    <h3>Data Processing</h3>
-                    <ul class="skill-list">
-                        <li>Apache Kafka</li>
-                        <li>Apache Spark</li>
-                        <li>ETL Pipeline Design</li>
-                        <li>Data Modeling</li>
-                        <li>Data Warehousing</li>
-                        <li>Data Mining</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <h3>Programming Languages</h3>
-                    <ul class="skill-list">
-                        <li>Python</li>
-                        <li>Java</li>
-                        <li>JavaScript</li>
-                        <li>SQL</li>
-                        <li>NoSQL</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <h3>Databases</h3>
-                    <ul class="skill-list">
-                        <li>MySQL</li>
-                        <li>PostgreSQL</li>
-                        <li>ArangoDB</li>
-                        <li>MongoDB</li>
-                        <li>Database Optimization</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <h3>Development & Tools</h3>
-                    <ul class="skill-list">
-                        <li>Unit Testing</li>
-                        <li>Integration Testing</li>
-                        <li>Git</li>
-                        <li>CI/CD Pipelines</li>
-                        <li>AWS & Azure</li>
-                        <li>Docker & Kubernetes</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Data Projects</h2>
-            <div class="projects-container">
-                <div class="project-card">
-                    <div class="project-img">
-                        <span>📊</span>
-                    </div>
-                    <div class="project-content">
-                        <h3>Customer Segmentation for E-Commerce</h3>
-                        <p>Advanced data analysis project leveraging clustering techniques to identify customer segments based on transaction patterns.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Pandas</span>
-                            <span class="tech-tag">NumPy</span>
-                            <span class="tech-tag">SQL</span>
-                            <span class="tech-tag">sci-kit-learn</span>
-                        </div>
-                        <p>Analyzed 50,000+ customer transactions & survey data to identify behavioral segments. Utilized K-Means and hierarchical clustering for optimal segmentation strategy.</p>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-img">
-                        <span>🔍</span>
-                    </div>
-                    <div class="project-content">
-                        <h3>Object, Color, and Distance Detection System</h3>
-                        <p>AI-powered assistive technology for the visually impaired using computer vision and machine learning.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">OpenCV</span>
-                            <span class="tech-tag">SSD</span>
-                            <span class="tech-tag">PyTest</span>
-                        </div>
-                        <p>Engineered a system achieving 98% accuracy in real-time object detection with 95% success rate in distance measurement up to 60 feet. Published results in IRJMETS.</p>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-img">
-                        <span>🛠️</span>
-                    </div>
-                    <div class="project-content">
-                        <h3>FixFinder – Service Provider Platform</h3>
-                        <p>End-to-end platform connecting users with local service providers, featuring comprehensive analytics dashboards.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">React.js</span>
-                            <span class="tech-tag">MongoDB</span>
-                            <span class="tech-tag">Express.js</span>
-                            <span class="tech-tag">TypeScript</span>
-                            <span class="tech-tag">Redux</span>
-                        </div>
-                        <p>Built a scalable platform with role-specific dashboards enabling data-driven insights for service providers and administrators. Implemented service analytics to optimize discovery and booking efficiency.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2 class="section-title">Work Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <h3>Software Engineer</h3>
-                        <h4>LTI Mindtree | September 2022 – July 2024</h4>
-                        <ul>
-                            <li>Engineered Java Spring boot-microservices, resolving bottlenecks to boost backend performance by 30%</li>
-                            <li>Designed and deployed a unified ETL pipeline on Azure to process data from 5+ data sources using Spark</li>
-                            <li>Developed a centralized portal for mapping 200+ data sources, reducing manual mapping errors by 25%</li>
-                            <li>Optimized Performance of MySQL & PostgreSQL databases via advanced indexing and query tuning, slashing response time by 40%</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item right">
-                    <div class="timeline-content">
-                        <h3>Full Stack Web Developer</h3>
-                        <h4>Nismotek | November 2020 – April 2021</h4>
-                        <ul>
-                            <li>Developed a Django, MySQL web app with data analytics capabilities for patient appointment management</li>
-                            <li>Executed unit testing for core features, ensuring 98% system reliability</li>
-                            <li>Improved efficiency by 60% through data-driven automation of appointment management</li>
-                            <li>Partnered with UX designers and stakeholders to iteratively refine the system based on analytics insights</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="education" class="education">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="education-container">
-                <div class="education-card">
-                    <h3>Northeastern University</h3>
-                    <h4>Master of Science, Information Systems</h4>
-                    <p>Boston, MA | December 2026</p>
-                    <p>GPA: 3.85</p>
-                    <p>Relevant Courses: Application Engineering and Development, Web Design, Data Design and Data Management, Software Quality Control and Management</p>
-                </div>
-                <div class="education-card">
-                    <h3>Mumbai University</h3>
-                    <h4>Bachelor of Engineering, Information Technology</h4>
-                    <p>India | May 2022</p>
-                    <p>Certification: Oracle Payroll Cloud 2022 – Certified Implementation Professional</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <p>I'm always open to discussing data Engineer projects, technology innovations, or potential opportunities. Feel free to reach out using the contact form or through any of the platforms below.</p>
-                    <p>Email: singh.varun3@northeastern.edu</p>
-                    <p>Phone: 617-888-6415</p>
-                    <div class="contact-links">
-                        <a href="https://linkedin.com/in/varunsinghtech" target="_blank">in</a>
-                        <a href="mailto:singh.varun3@northeastern.edu">✉</a>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Varun Singh. All rights reserved.</p>
-        </div>
-    </footer>
+<div id="root"></div>
+<script type="text/babel">
+const { useState, useEffect } = React;
 
-    <form id="contactForm">
-        <!-- same fields -->
-    </form>
-    
-    <script>
-    document.getElementById("contactForm").addEventListener("submit", function(e) {
-        e.preventDefault();
-        
-        const data = {
-            name: document.getElementById("name").value,
-            email: document.getElementById("email").value,
-            message: document.getElementById("message").value
-        };
-    
-        fetch("http://localhost:3000/send-email", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(data)
-        }).then(response => {
-            if (response.ok) {
-                alert("Message sent successfully!");
-                document.getElementById("contactForm").reset();
-            } else {
-                alert("Failed to send message. Please try again.");
-            }
-        });
-    });
-    </script>
-    
+const Portfolio = () => {
+  const [scrollY, setScrollY] = useState(0);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [loaded, setLoaded] = useState(false);
+  const [visibleSections, setVisibleSections] = useState({});
+  const [pipelineStage, setPipelineStage] = useState(0);
+  const [extractedData, setExtractedData] = useState([]);
+  const [transformedData, setTransformedData] = useState([]);
+  const [loadedData, setLoadedData] = useState([]);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [chartData, setChartData] = useState([65, 45, 80, 55, 90, 40, 70]);
+  const [chartType, setChartType] = useState('bar');
 
+  useEffect(() => {
+    setTimeout(() => setLoaded(true), 100);
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll);
+    const observer = new IntersectionObserver(
+      (entries) => entries.forEach(entry => {
+        if (entry.isIntersecting) setVisibleSections(prev => ({ ...prev, [entry.target.id]: true }));
+      }),
+      { threshold: 0.1 }
+    );
+    document.querySelectorAll('section[id]').forEach(section => observer.observe(section));
+    return () => { window.removeEventListener('scroll', handleScroll); observer.disconnect(); };
+  }, []);
+
+  const rawSourceData = [
+    { id: 1, name: '  John DOE  ', email: 'JOHN@EMAIL.COM', salary: '50000', date: '2024/01/15', status: 'active' },
+    { id: 2, name: 'jane smith', email: 'jane@email', salary: 'N/A', date: '15-01-2024', status: 'ACTIVE' },
+    { id: 3, name: 'BOB_Wilson', email: 'bob@company.com', salary: '75000', date: '2024-01-15', status: 'Active' },
+    { id: 4, name: '  ALICE   brown', email: 'alice@test.org', salary: '62000', date: '01/15/2024', status: 'inactive' },
+  ];
+
+  const handleExtract = async () => {
+    setIsAnimating(true);
+    await new Promise(r => setTimeout(r, 800));
+    setExtractedData(rawSourceData);
+    setPipelineStage(1);
+    setIsAnimating(false);
+  };
+
+  const handleTransform = async () => {
+    setIsAnimating(true);
+    await new Promise(r => setTimeout(r, 1000));
+    const cleaned = extractedData.map(row => ({
+      id: row.id,
+      name: row.name.trim().replace('_', ' ').toLowerCase().split(' ').filter(w => w).map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
+      email: row.email.toLowerCase().includes('@') && row.email.includes('.') ? row.email.toLowerCase() : '⚠️ Invalid',
+      salary: isNaN(parseInt(row.salary)) ? '⚠️ Null' : `${parseInt(row.salary).toLocaleString()}`,
+      date: '2024-01-15',
+      status: row.status.toLowerCase() === 'active' ? '✅ Active' : '❌ Inactive'
+    }));
+    setTransformedData(cleaned);
+    setPipelineStage(2);
+    setIsAnimating(false);
+  };
+
+  const handleLoad = async () => {
+    setIsAnimating(true);
+    await new Promise(r => setTimeout(r, 800));
+    setLoadedData(transformedData.filter(row => !row.email.includes('⚠️')));
+    setPipelineStage(3);
+    setIsAnimating(false);
+  };
+
+  const resetPipeline = () => { setPipelineStage(0); setExtractedData([]); setTransformedData([]); setLoadedData([]); };
+
+  const SkillIcon = ({ name, size = 40 }) => {
+    const icons = {
+      'Python': <svg viewBox="0 0 128 128" width={size} height={size}><linearGradient id="py1" x1="70" x2="17" y1="82" y2="14" gradientUnits="userSpaceOnUse"><stop offset="0" stopColor="#5A9FD4"/><stop offset="1" stopColor="#306998"/></linearGradient><linearGradient id="py2" x1="88" x2="55" y1="118" y2="64" gradientUnits="userSpaceOnUse"><stop offset="0" stopColor="#FFD43B"/><stop offset="1" stopColor="#FFE873"/></linearGradient><path fill="url(#py1)" d="M63 11c-33 0-31 14-31 14v15h31v4H29S11 41 11 74s16 32 16 32h10V91s-1-16 16-16h27s15 0 15-15V33S98 11 63 11zm-17 12c3 0 5 2 5 5s-2 6-5 6-5-3-5-6 2-5 5-5z"/><path fill="url(#py2)" d="M65 117c33 0 31-14 31-14v-15H65v-4h35s18 3 18-30-16-32-16-32H92v15s1 16-16 16H49s-15 0-15 15v27s-3 22 31 22zm17-12c-3 0-5-2-5-5s2-6 5-6 5 3 5 6-2 5-5 5z"/></svg>,
+      'Apache Spark': <svg viewBox="0 0 128 128" width={size} height={size}><path fill="#E25A1C" d="M64 5L5 35v58l59 30 59-30V35L64 5zm0 10l49 25v48L64 113 15 88V40l49-25z"/><circle cx="64" cy="64" r="15" fill="#E25A1C"/></svg>,
+      'Kafka': <svg viewBox="0 0 128 128" width={size} height={size}><circle cx="64" cy="64" r="50" fill="none" stroke="#231F20" strokeWidth="6"/><circle cx="64" cy="40" r="10" fill="#231F20"/><circle cx="44" cy="78" r="10" fill="#231F20"/><circle cx="84" cy="78" r="10" fill="#231F20"/><line x1="64" y1="50" x2="64" y2="64" stroke="#231F20" strokeWidth="4"/><line x1="54" y1="72" x2="64" y2="64" stroke="#231F20" strokeWidth="4"/><line x1="74" y1="72" x2="64" y2="64" stroke="#231F20" strokeWidth="4"/></svg>,
+      'PostgreSQL': <svg viewBox="0 0 128 128" width={size} height={size}><path fill="#336791" d="M94 22c-7-5-16-7-26-7-9 0-17 2-24 6-8 5-13 12-16 21-3 10-2 21 1 32 3 9 7 17 13 23 5 6 12 9 18 11 2 0 4-1 6-2 1-2 2-3 3-5 0-2 1-6 1-10v-3c0-3 0-5 1-6s1-1 3-2c2 0 3 0 4 0h1c4 0 6-1 8-2 3-2 4-4 5-7 1-5 1-10-2-16l-1-3-1-3c0-1 0-1 0-1 0-1 1-2 1-3l1-1c3-4 5-8 6-12 1-4 1-8-1-12z"/><ellipse cx="55" cy="50" rx="8" ry="10" fill="#fff"/><ellipse cx="78" cy="50" rx="8" ry="10" fill="#fff"/><circle cx="55" cy="52" r="4" fill="#336791"/><circle cx="78" cy="52" r="4" fill="#336791"/></svg>,
+      'AWS': <svg viewBox="0 0 128 128" width={size} height={size}><path fill="#FF9900" d="M25 82c10-6 22-9 35-9s25 3 35 9c2 1 4 0 4-2 0-1 0-2-1-3-10-6-24-10-38-10s-28 4-38 10c-1 1-1 2-1 3 0 2 2 3 4 2zm55-20c0-3-2-5-5-5H55c-3 0-5 2-5 5v25c0 3 2 5 5 5h10v-10h10c6 0 10-4 10-10v-10zm-10 10H65v-10h5c3 0 5 2 5 5v5z"/></svg>,
+      'Docker': <svg viewBox="0 0 128 128" width={size} height={size}><path fill="#2496ED" d="M125 52c-4-3-10-3-15-1-1-5-4-10-8-13l-2-1-1 2c-3 3-4 8-3 12 0 3 1 6 3 8-1 1-3 2-4 3-3 1-6 2-9 2H1l0 1c0 7 1 13 3 19l1 2c8 13 22 19 37 19 29 0 53-13 64-41 7 1 15-2 19-9l1-2-2-1zM28 39h10v10H28V39zm13 0h10v10H41V39zM28 52h10v10H28V52zm13 0h10v10H41V52zm13 0h10v10H54V52zm0-13h10v10H54V39zm-13 26h10v10H41V65zM28 65h10v10H28V65zm26 0h10v10H54V65zm13 0h10v10H67V65z"/></svg>,
+      'MongoDB': <svg viewBox="0 0 128 128" width={size} height={size}><path fill="#4FAA41" d="M90 53c-4-12-11-22-22-28l-3-4-1 1c0 2-1 3-2 4l-1 2-1-1c-12 5-20 14-25 27-2 4-3 9-3 14 0 2 0 4 1 6l1 2c4 11 12 19 23 24 3 1 7 2 10 2l3 1v-22l-1-2c-2-1-3-3-3-5 0-3 2-5 5-5s5 2 5 5c0 2-1 4-3 5l-1 2v22l3-1c13-3 24-12 29-25l1-4c1-5 1-10 0-15l-1-3c-2-7-6-13-11-18l-3-3z"/><path fill="#3F9838" d="M64 93l1 28 2-1c0-9 1-18 1-27l-1-1-3 1z"/></svg>,
+    };
+    return icons[name] || <div className="w-10 h-10 rounded-full bg-violet-100 flex items-center justify-center text-violet-600 font-bold text-sm">{name[0]}</div>;
+  };
+
+  const skills = ['Python', 'Apache Spark', 'Kafka', 'PostgreSQL', 'AWS', 'Docker', 'MongoDB'];
+  const experiences = [
+    { role: 'Digital Intern', company: 'Mass General Brigham', period: 'Jun 2025 – Dec 2025', location: 'Boston, MA', type: 'Healthcare', tech: ['MS Fabric', 'PySpark', 'PowerBI'], color: '#6366f1', highlights: ['Architected automated ETL pipelines reducing manual intervention by 50%', 'Processed 140,000+ records with automated monitoring', 'Created data catalog documentation improving discoverability'] },
+    { role: 'Software Engineer', company: 'LTI Mindtree', period: 'Sep 2022 – Jul 2024', location: 'India', type: 'IT Services', tech: ['Apache Kafka', 'Spark', 'Java', 'MySQL'], color: '#8b5cf6', highlights: ['Developed ETL pipelines improving data accessibility by 25%', 'Optimized Data Warehouse tables reducing query processing time', 'Trained 50 engineers on Apache Kafka and ArangoDB'] },
+    { role: 'Data Analyst Intern', company: 'Nismotek', period: 'Nov 2020 – Apr 2021', location: 'India', type: 'Technology', tech: ['Python', 'PySpark', 'MySQL'], color: '#a855f7', highlights: ['Designed database schema for analytics and reporting', 'Built automated pipelines reducing manual entry by 60%', 'Achieved 98% data accuracy through validation monitoring'] }
+  ];
+  const funFacts = [
+    { icon: '☕', text: 'Mass coffee consumer', detail: 'Powered by espresso' },
+    { icon: '🎮', text: 'PC Gamer', detail: 'FPS & Strategy' },
+    { icon: '🏏', text: 'Cricket Enthusiast', detail: 'Weekend warrior' },
+    { icon: '📚', text: 'Continuous Learner', detail: 'Always exploring' },
+  ];
+
+  const sectionClass = (id) => `transition-all duration-1000 ease-out ${visibleSections[id] ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`;
+  const maxChartValue = Math.max(...chartData);
+
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white text-slate-800 overflow-x-hidden">
+      {/* Preloader */}
+      <div className={`fixed inset-0 z-50 bg-white flex items-center justify-center transition-all duration-700 ${loaded ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
+        <div className="text-5xl font-black bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent animate-pulse">VS</div>
+      </div>
+
+      {/* Navigation */}
+      <nav className={`fixed top-0 w-full z-40 px-6 py-4 transition-all duration-500 ${scrollY > 50 ? 'bg-white/80 backdrop-blur-xl shadow-sm' : ''}`}>
+        <div className="max-w-6xl mx-auto flex justify-between items-center">
+          <div className="text-2xl font-black bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent">VS</div>
+          <div className="hidden md:flex gap-6 text-sm font-medium">
+            {['Home', 'About', 'Playground', 'Experience', 'Contact'].map((item) => (
+              <a key={item} href={`#${item.toLowerCase()}`} className="text-slate-500 hover:text-violet-600 transition-all relative group">
+                {item}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-violet-600 group-hover:w-full transition-all duration-300" />
+              </a>
+            ))}
+          </div>
+          <button onClick={() => setMenuOpen(!menuOpen)} className="md:hidden text-2xl">☰</button>
+        </div>
+      </nav>
+
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div className="fixed inset-0 bg-white z-40 flex flex-col items-center justify-center gap-6 text-xl">
+          <button onClick={() => setMenuOpen(false)} className="absolute top-6 right-6 text-2xl">✕</button>
+          {['Home', 'About', 'Playground', 'Experience', 'Contact'].map((item) => (
+            <a key={item} href={`#${item.toLowerCase()}`} onClick={() => setMenuOpen(false)} className="text-slate-600 hover:text-violet-600">{item}</a>
+          ))}
+        </div>
+      )}
+
+      {/* Hero */}
+      <section id="home" className="min-h-screen flex items-center px-6 pt-20 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 right-20 w-72 h-72 bg-violet-200 rounded-full blur-3xl opacity-40 animate-pulse" />
+          <div className="absolute bottom-20 left-20 w-96 h-96 bg-indigo-200 rounded-full blur-3xl opacity-30 animate-pulse" />
+        </div>
+        <div className="max-w-6xl mx-auto w-full grid lg:grid-cols-2 gap-12 items-center relative z-10">
+          <div className={`text-center lg:text-left transition-all duration-1000 ${loaded ? 'translate-x-0 opacity-100' : '-translate-x-20 opacity-0'}`}>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-violet-100 to-indigo-100 text-violet-700 text-sm font-medium mb-6">
+              <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+              Open to Opportunities
+            </div>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black mb-4 leading-tight">
+              Hi, I'm <span className="bg-gradient-to-r from-violet-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">Varun</span>
+            </h1>
+            <p className="text-2xl text-slate-500 font-light mb-2">Data Engineer & Pipeline Architect</p>
+            <p className="text-lg text-slate-400 mb-8 max-w-lg mx-auto lg:mx-0">
+              I turn messy data into clean insights. Currently crafting data magic at <span className="text-violet-600 font-medium">Northeastern University</span> 🎓
+            </p>
+            <div className="flex flex-wrap gap-3 justify-center lg:justify-start mb-8">
+              {funFacts.map((fact, i) => (
+                <div key={i} className="group relative">
+                  <div className="px-3 py-2 bg-white rounded-full shadow-sm border border-slate-100 text-sm flex items-center gap-2 hover:border-violet-200 hover:shadow-md transition-all cursor-default">
+                    <span>{fact.icon}</span>
+                    <span className="text-slate-600">{fact.text}</span>
+                  </div>
+                  <div className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-slate-800 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                    {fact.detail}
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="flex gap-4 justify-center lg:justify-start">
+              <a href="#playground" className="px-6 py-3 rounded-full bg-gradient-to-r from-violet-600 to-indigo-600 text-white font-medium hover:shadow-lg hover:shadow-violet-300 hover:-translate-y-1 transition-all">
+                Try the Playground ↓
+              </a>
+              <a href="https://www.linkedin.com/in/varunsinghtech/" target="_blank" className="px-6 py-3 rounded-full border-2 border-slate-200 text-slate-600 font-medium hover:border-violet-300 transition-all">
+                LinkedIn →
+              </a>
+            </div>
+          </div>
+          <div className={`relative transition-all duration-1000 delay-300 ${loaded ? 'scale-100 opacity-100' : 'scale-95 opacity-0'}`}>
+            <div className="relative mx-auto w-80 h-80">
+              <div className="absolute inset-0 rounded-full border-2 border-dashed border-violet-200 animate-spin" style={{ animationDuration: '30s' }} />
+              <div className="absolute inset-4 rounded-full border-2 border-dashed border-indigo-200 animate-spin" style={{ animationDuration: '25s', animationDirection: 'reverse' }} />
+              <div className="absolute inset-8 rounded-full bg-gradient-to-br from-violet-400 via-indigo-400 to-purple-500" />
+              <div className="absolute inset-10 rounded-full bg-white shadow-2xl flex items-center justify-center">
+                <div className="text-6xl font-black bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent">VS</div>
+              </div>
+              <div className="absolute -top-2 right-4 p-2 bg-white rounded-xl shadow-lg animate-bounce" style={{ animationDuration: '3s' }}>
+                <SkillIcon name="Python" size={28} />
+              </div>
+              <div className="absolute bottom-8 -left-4 p-2 bg-white rounded-xl shadow-lg animate-bounce" style={{ animationDuration: '3.5s' }}>
+                <SkillIcon name="Apache Spark" size={28} />
+              </div>
+              <div className="absolute top-1/2 -right-4 p-2 bg-white rounded-xl shadow-lg animate-bounce" style={{ animationDuration: '4s' }}>
+                <SkillIcon name="Kafka" size={28} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About */}
+      <section id="about" className="py-24 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className={`text-center mb-16 ${sectionClass('about')}`}>
+            <span className="text-violet-600 font-medium">About Me</span>
+            <h2 className="text-4xl md:text-5xl font-black mt-2">The <span className="bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent">Data Nerd</span> Behind the Code</h2>
+          </div>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className={sectionClass('about')}>
+              <p className="text-lg text-slate-600 leading-relaxed mb-6">
+                I'm not your typical data engineer. Sure, I build ETL pipelines and optimize queries, but I also believe data should tell a story. At <span className="font-semibold text-violet-600">Mass General Brigham</span>, I processed 140K+ medical records. At <span className="font-semibold text-violet-600">LTI Mindtree</span>, I trained 50+ engineers on Kafka.
+              </p>
+              <p className="text-lg text-slate-600 leading-relaxed mb-8">
+                When I'm not wrangling data, you'll find me exploring new tech, gaming, or hunting for the perfect cup of coffee ☕
+              </p>
+              <div className="flex flex-wrap gap-3">
+                {skills.slice(0, 6).map((skill) => (
+                  <div key={skill} className="flex items-center gap-2 px-3 py-2 bg-white rounded-lg shadow-sm border border-slate-100 hover:border-violet-200 transition-all">
+                    <SkillIcon name={skill} size={20} />
+                    <span className="text-sm font-medium text-slate-700">{skill}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className={`grid grid-cols-2 gap-4 ${sectionClass('about')}`}>
+              {[
+                { num: '140K+', label: 'Records Processed', icon: '📊', color: 'from-violet-500 to-indigo-500' },
+                { num: '50%', label: 'Faster Pipelines', icon: '⚡', color: 'from-amber-500 to-orange-500' },
+                { num: '50+', label: 'Engineers Mentored', icon: '👥', color: 'from-emerald-500 to-teal-500' },
+                { num: '3.85', label: 'GPA at NEU', icon: '🎓', color: 'from-pink-500 to-rose-500' }
+              ].map((stat, i) => (
+                <div key={i} className="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg hover:-translate-y-1 transition-all group">
+                  <span className="text-3xl">{stat.icon}</span>
+                  <div className={`text-3xl font-black mt-2 bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}>{stat.num}</div>
+                  <div className="text-sm text-slate-500">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Interactive Playground */}
+      <section id="playground" className="py-24 px-6 bg-gradient-to-b from-slate-50 to-white">
+        <div className="max-w-6xl mx-auto">
+          <div className={`text-center mb-16 ${sectionClass('playground')}`}>
+            <span className="text-violet-600 font-medium">Interactive</span>
+            <h2 className="text-4xl md:text-5xl font-black mt-2">Data <span className="bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent">Playground</span></h2>
+            <p className="text-slate-500 mt-4 max-w-xl mx-auto">Experience data engineering concepts hands on. Click, interact, and learn!</p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-8">
+            {/* ETL Pipeline Simulator */}
+            <div className={`bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-3xl shadow-2xl border border-slate-700 p-8 lg:col-span-2 ${sectionClass('playground')} overflow-hidden relative`}>
+              <div className="absolute inset-0 opacity-10">
+                <div className="absolute inset-0" style={{backgroundImage: 'linear-gradient(rgba(139,92,246,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(139,92,246,0.3) 1px, transparent 1px)', backgroundSize: '30px 30px'}} />
+              </div>
+              <div className="relative z-10">
+                <div className="flex items-center justify-between mb-8">
+                  <div>
+                    <h3 className="text-2xl font-bold text-white flex items-center gap-3">
+                      <span className="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-500 to-indigo-600 flex items-center justify-center text-lg shadow-lg shadow-violet-500/30">🔄</span>
+                      ETL Pipeline Simulator
+                    </h3>
+                    <p className="text-sm text-slate-400 mt-1 ml-13">Watch data flow through each transformation stage</p>
+                  </div>
+                  <button onClick={resetPipeline} className="px-5 py-2.5 bg-slate-700/50 hover:bg-slate-600/50 backdrop-blur rounded-xl text-sm font-medium text-slate-300 transition-all border border-slate-600 hover:border-slate-500 flex items-center gap-2">
+                    ↺ Reset Pipeline
+                  </button>
+                </div>
+
+                {/* Pipeline Stage Cards */}
+                <div className="relative mb-8">
+                  <div className="grid grid-cols-4 gap-4 relative">
+                    <svg className="absolute top-1/2 left-0 w-full h-8 -translate-y-1/2 pointer-events-none hidden lg:block" style={{zIndex: 0}}>
+                      {[0, 1, 2].map(i => (
+                        <g key={i}>
+                          <line x1={`${12.5 + i * 25}%`} y1="50%" x2={`${37.5 + i * 25}%`} y2="50%" stroke={pipelineStage > i ? '#8b5cf6' : '#334155'} strokeWidth="3" strokeDasharray={pipelineStage > i ? "0" : "8 4"} className="transition-all duration-500"/>
+                          {pipelineStage > i && (
+                            <>
+                              <circle r="3" fill="#c4b5fd" opacity="0.6"><animateMotion dur="2s" repeatCount="indefinite" path={`M${(12.5 + i * 25) * 10},20 L${(37.5 + i * 25) * 10},20`} /></circle>
+                              <circle r="2" fill="#a78bfa" opacity="0.4"><animateMotion dur="2s" repeatCount="indefinite" begin="0.5s" path={`M${(12.5 + i * 25) * 10},20 L${(37.5 + i * 25) * 10},20`} /></circle>
+                            </>
+                          )}
+                        </g>
+                      ))}
+                    </svg>
+                    
+                    {[
+                      { stage: 0, label: 'Source', icon: '📁', desc: 'Raw messy data', color: 'amber', action: null },
+                      { stage: 1, label: 'Extract', icon: '📥', desc: 'Pull from source', color: 'orange', action: handleExtract },
+                      { stage: 2, label: 'Transform', icon: '⚙️', desc: 'Clean & validate', color: 'blue', action: handleTransform },
+                      { stage: 3, label: 'Load', icon: '📤', desc: 'Store clean data', color: 'green', action: handleLoad },
+                    ].map((item, i) => {
+                      const isComplete = pipelineStage >= i;
+                      const isActive = pipelineStage === i - 1 && !isAnimating;
+                      const isProcessing = isAnimating && pipelineStage === i - 1;
+                      const colorMap = {amber: ['from-amber-500 to-orange-500', 'shadow-amber-500/30', 'border-amber-500/50'], orange: ['from-orange-500 to-red-500', 'shadow-orange-500/30', 'border-orange-500/50'], blue: ['from-blue-500 to-cyan-500', 'shadow-blue-500/30', 'border-blue-500/50'], green: ['from-emerald-500 to-teal-500', 'shadow-emerald-500/30', 'border-emerald-500/50']};
+                      const colors = colorMap[item.color];
+                      
+                      return (
+                        <button key={i} onClick={item.action} disabled={isAnimating || (i > 0 && pipelineStage < i - 1) || pipelineStage >= i}
+                          className={`relative p-5 rounded-2xl border-2 transition-all duration-500 text-left group ${isComplete ? `bg-gradient-to-br ${colors[0]} border-transparent shadow-lg ${colors[1]}` : isActive ? `bg-slate-800/80 ${colors[2]} hover:shadow-lg hover:shadow-violet-500/20 cursor-pointer backdrop-blur` : 'bg-slate-800/40 border-slate-700/50 opacity-40 cursor-not-allowed'}`}
+                          style={{zIndex: 1}}>
+                          {isActive && <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${colors[0]} opacity-20 blur-xl animate-pulse`} />}
+                          {isProcessing && (
+                            <div className="absolute inset-0 flex items-center justify-center bg-slate-900/60 rounded-2xl backdrop-blur-sm z-20">
+                              <div className="flex flex-col items-center gap-2">
+                                <div className="w-8 h-8 border-3 border-violet-500 border-t-transparent rounded-full animate-spin" style={{borderWidth: '3px'}} />
+                                <span className="text-xs text-violet-300 font-medium">Processing...</span>
+                              </div>
+                            </div>
+                          )}
+                          <div className="relative z-10">
+                            <div className="flex items-center justify-between mb-2">
+                              <div className={`w-12 h-12 rounded-xl flex items-center justify-center text-2xl ${isComplete ? 'bg-white/20' : 'bg-slate-700'} transition-all`}>
+                                {isComplete ? '✓' : item.icon}
+                              </div>
+                              <span className={`text-xs font-bold px-2 py-1 rounded-full ${isComplete ? 'bg-white/20 text-white' : 'bg-slate-700 text-slate-400'}`}>{i + 1}/4</span>
+                            </div>
+                            <h4 className={`font-bold text-lg ${isComplete ? 'text-white' : 'text-slate-200'}`}>{item.label}</h4>
+                            <p className={`text-sm ${isComplete ? 'text-white/70' : 'text-slate-500'}`}>{item.desc}</p>
+                            {isActive && (
+                              <div className="mt-3 flex items-center gap-2 text-violet-400 text-sm font-medium">
+                                <span className="w-2 h-2 rounded-full bg-violet-400 animate-pulse" />
+                                Click to execute →
+                              </div>
+                            )}
+                          </div>
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                {/* Data Flow Visualization */}
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+                  {/* Source Data */}
+                  <div className={`rounded-2xl p-5 transition-all duration-500 backdrop-blur border ${pipelineStage >= 0 ? 'bg-amber-500/10 border-amber-500/30' : 'bg-slate-800/50 border-slate-700/50'}`}>
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center text-sm shadow-lg shadow-amber-500/30">📁</div>
+                      <div className="flex-1">
+                        <span className="font-semibold text-white">{pipelineStage >= 1 ? 'Extracted Data' : 'Source Data'}</span>
+                        <div className="text-xs text-slate-400">4 records</div>
+                      </div>
+                      <span className="text-xs px-2 py-1 bg-amber-500/20 text-amber-400 rounded-full font-medium border border-amber-500/30">Raw</span>
+                    </div>
+                    <div className="space-y-2 max-h-56 overflow-auto custom-scrollbar">
+                      {(pipelineStage >= 1 ? extractedData : rawSourceData).map((row, i) => (
+                        <div key={i} className="p-3 bg-slate-800/80 rounded-xl text-xs font-mono border border-slate-700/50 hover:border-amber-500/30 transition-all">
+                          <div className="space-y-1.5">
+                            <div className="flex justify-between"><span className="text-slate-500">name:</span><span className="text-amber-400 truncate ml-2">"{row.name}"</span></div>
+                            <div className="flex justify-between"><span className="text-slate-500">email:</span><span className="text-amber-400 truncate ml-2">"{row.email}"</span></div>
+                            <div className="flex justify-between"><span className="text-slate-500">salary:</span><span className="text-amber-400">"{row.salary}"</span></div>
+                            <div className="flex justify-between"><span className="text-slate-500">status:</span><span className="text-amber-400">"{row.status}"</span></div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    {pipelineStage === 0 && <div className="mt-4 p-3 bg-amber-500/10 rounded-xl text-xs text-amber-300 border border-amber-500/20">⚠️ Issues: Inconsistent casing, whitespace, invalid emails</div>}
+                  </div>
+
+                  {/* Transformed Data */}
+                  <div className={`rounded-2xl p-5 transition-all duration-500 backdrop-blur border ${pipelineStage >= 2 ? 'bg-blue-500/10 border-blue-500/30' : 'bg-slate-800/50 border-slate-700/50'}`}>
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className={`w-8 h-8 rounded-lg flex items-center justify-center text-sm shadow-lg ${pipelineStage >= 2 ? 'bg-gradient-to-br from-blue-500 to-cyan-500 shadow-blue-500/30' : 'bg-slate-700'}`}>⚙️</div>
+                      <div className="flex-1">
+                        <span className={`font-semibold ${pipelineStage >= 2 ? 'text-white' : 'text-slate-400'}`}>Transformed Data</span>
+                        <div className="text-xs text-slate-500">{pipelineStage >= 2 ? '4 records processed' : 'Awaiting data'}</div>
+                      </div>
+                      {pipelineStage >= 2 && <span className="text-xs px-2 py-1 bg-blue-500/20 text-blue-400 rounded-full font-medium border border-blue-500/30">Cleaned</span>}
+                    </div>
+                    {pipelineStage >= 2 ? (
+                      <div className="space-y-2 max-h-56 overflow-auto custom-scrollbar">
+                        {transformedData.map((row, i) => (
+                          <div key={i} className="p-3 bg-slate-800/80 rounded-xl text-xs font-mono border border-slate-700/50 hover:border-blue-500/30 transition-all animate-fadeIn" style={{animationDelay: `${i * 150}ms`}}>
+                            <div className="space-y-1.5">
+                              <div className="flex justify-between"><span className="text-slate-500">name:</span><span className="text-blue-400 font-medium truncate ml-2">{row.name}</span></div>
+                              <div className="flex justify-between"><span className="text-slate-500">email:</span><span className={`truncate ml-2 ${row.email.includes('⚠️') ? 'text-red-400' : 'text-blue-400'}`}>{row.email}</span></div>
+                              <div className="flex justify-between"><span className="text-slate-500">salary:</span><span className={row.salary.includes('⚠️') ? 'text-red-400' : 'text-emerald-400 font-medium'}>{row.salary}</span></div>
+                              <div className="flex justify-between"><span className="text-slate-500">status:</span><span>{row.status}</span></div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    ) : (
+                      <div className="h-56 flex flex-col items-center justify-center text-slate-500 text-sm gap-3">
+                        <div className="w-16 h-16 rounded-2xl bg-slate-800 flex items-center justify-center text-3xl opacity-50">⚙️</div>
+                        {pipelineStage === 1 ? 'Waiting for Transform →' : 'Awaiting extraction...'}
+                      </div>
+                    )}
+                    {pipelineStage >= 2 && <div className="mt-4 p-3 bg-blue-500/10 rounded-xl text-xs text-blue-300 border border-blue-500/20">✨ Applied: Trim, fix casing, validate emails, format currency</div>}
+                  </div>
+
+                  {/* Loaded Data */}
+                  <div className={`rounded-2xl p-5 transition-all duration-500 backdrop-blur border ${pipelineStage >= 3 ? 'bg-emerald-500/10 border-emerald-500/30' : 'bg-slate-800/50 border-slate-700/50'}`}>
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className={`w-8 h-8 rounded-lg flex items-center justify-center text-sm shadow-lg ${pipelineStage >= 3 ? 'bg-gradient-to-br from-emerald-500 to-teal-500 shadow-emerald-500/30' : 'bg-slate-700'}`}>🗄️</div>
+                      <div className="flex-1">
+                        <span className={`font-semibold ${pipelineStage >= 3 ? 'text-white' : 'text-slate-400'}`}>Data Warehouse</span>
+                        <div className="text-xs text-slate-500">{pipelineStage >= 3 ? `${loadedData.length} valid records` : 'Ready to receive'}</div>
+                      </div>
+                      {pipelineStage >= 3 && <span className="text-xs px-2 py-1 bg-emerald-500/20 text-emerald-400 rounded-full font-medium border border-emerald-500/30">Loaded</span>}
+                    </div>
+                    {pipelineStage >= 3 ? (
+                      <>
+                        <div className="space-y-2 max-h-56 overflow-auto custom-scrollbar">
+                          {loadedData.map((row, i) => (
+                            <div key={i} className="p-3 bg-slate-800/80 rounded-xl text-xs font-mono border border-slate-700/50 hover:border-emerald-500/30 transition-all animate-fadeIn" style={{animationDelay: `${i * 150}ms`}}>
+                              <div className="space-y-1.5">
+                                <div className="flex justify-between"><span className="text-slate-500">name:</span><span className="text-emerald-400 font-medium truncate ml-2">{row.name}</span></div>
+                                <div className="flex justify-between"><span className="text-slate-500">email:</span><span className="text-emerald-400 truncate ml-2">{row.email}</span></div>
+                                <div className="flex justify-between"><span className="text-slate-500">salary:</span><span className="text-emerald-300 font-medium">{row.salary}</span></div>
+                                <div className="flex justify-between"><span className="text-slate-500">status:</span><span>{row.status}</span></div>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                        <div className="mt-4 p-3 bg-emerald-500/10 rounded-xl text-xs border border-emerald-500/20 flex items-center justify-between">
+                          <span className="text-emerald-300">✅ {loadedData.length} records loaded</span>
+                          <span className="text-red-400">{transformedData.length - loadedData.length} rejected</span>
+                        </div>
+                      </>
+                    ) : (
+                      <div className="h-56 flex flex-col items-center justify-center text-slate-500 text-sm gap-3">
+                        <div className="w-16 h-16 rounded-2xl bg-slate-800 flex items-center justify-center text-3xl opacity-50">🗄️</div>
+                        {pipelineStage === 2 ? 'Ready to Load →' : 'Awaiting transformation...'}
+                      </div>
+                    )}
+                  </div>
+                </div>
+                
+                {pipelineStage >= 3 && (
+                  <div className="mt-6 p-4 bg-gradient-to-r from-violet-500/20 via-indigo-500/20 to-purple-500/20 rounded-2xl border border-violet-500/30 text-center animate-fadeIn">
+                    <div className="text-2xl mb-2">🎉</div>
+                    <h4 className="text-white font-bold">Pipeline Complete!</h4>
+                    <p className="text-violet-300 text-sm">Successfully extracted, transformed, and loaded {loadedData.length} clean records</p>
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* Chart Builder */}
+            <div className={`bg-white rounded-2xl shadow-sm border border-slate-100 p-6 lg:col-span-2 ${sectionClass('playground')}`}>
+              <div className="flex items-center justify-between mb-6">
+                <div>
+                  <h3 className="text-xl font-bold text-slate-800">📊 Live Chart Builder</h3>
+                  <p className="text-sm text-slate-500">Click bars to modify values, switch chart types</p>
+                </div>
+                <div className="flex gap-2">
+                  {['bar', 'line', 'area'].map(type => (
+                    <button key={type} onClick={() => setChartType(type)} className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${chartType === type ? 'bg-gradient-to-r from-violet-600 to-indigo-600 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>
+                      {type === 'bar' ? '📊' : type === 'line' ? '📈' : '📉'} {type.charAt(0).toUpperCase() + type.slice(1)}
+                    </button>
+                  ))}
+                </div>
+              </div>
+              <div className="h-56 flex items-end justify-around gap-3 px-6 bg-gradient-to-b from-slate-50 to-slate-100 rounded-xl p-6">
+                {chartData.map((value, i) => (
+                  <div key={i} className="flex-1 flex flex-col items-center gap-2 max-w-16">
+                    <span className="text-xs font-bold text-violet-600">{value}</span>
+                    {chartType === 'bar' && (
+                      <div className="w-full bg-gradient-to-t from-violet-600 to-indigo-400 rounded-t-lg cursor-pointer hover:from-violet-500 hover:to-indigo-300 transition-all shadow-sm hover:shadow-md"
+                        style={{ height: `${(value / maxChartValue) * 150}px` }}
+                        onClick={() => { const newData = [...chartData]; newData[i] = Math.floor(Math.random() * 90) + 10; setChartData(newData); }}
+                      />
+                    )}
+                    {chartType === 'line' && (
+                      <div className="relative w-full h-40 flex items-end justify-center">
+                        <div className="w-4 h-4 bg-violet-600 rounded-full absolute cursor-pointer hover:scale-125 transition-transform shadow-md"
+                          style={{ bottom: `${(value / maxChartValue) * 140}px` }}
+                          onClick={() => { const newData = [...chartData]; newData[i] = Math.floor(Math.random() * 90) + 10; setChartData(newData); }}
+                        />
+                      </div>
+                    )}
+                    {chartType === 'area' && (
+                      <div className="w-full bg-gradient-to-t from-violet-600/90 to-violet-300/50 rounded-t cursor-pointer hover:from-violet-500/90 hover:to-violet-200/50 transition-all"
+                        style={{ height: `${(value / maxChartValue) * 150}px` }}
+                        onClick={() => { const newData = [...chartData]; newData[i] = Math.floor(Math.random() * 90) + 10; setChartData(newData); }}
+                      />
+                    )}
+                    <span className="text-sm font-medium text-slate-500">{['Mon','Tue','Wed','Thu','Fri','Sat','Sun'][i]}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="flex gap-3 mt-4">
+                <button onClick={() => setChartData(Array.from({ length: 7 }, () => Math.floor(Math.random() * 90) + 10))} className="flex-1 py-3 bg-slate-100 hover:bg-slate-200 rounded-lg text-sm font-medium text-slate-600 transition-all">🎲 Randomize</button>
+                <button onClick={() => setChartData([30, 45, 60, 75, 90, 75, 60])} className="flex-1 py-3 bg-slate-100 hover:bg-slate-200 rounded-lg text-sm font-medium text-slate-600 transition-all">📈 Trending Up</button>
+                <button onClick={() => setChartData([90, 75, 60, 45, 30, 45, 60])} className="flex-1 py-3 bg-slate-100 hover:bg-slate-200 rounded-lg text-sm font-medium text-slate-600 transition-all">📉 Trending Down</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Experience */}
+      <section id="experience" className="py-24 px-6">
+        <div className="max-w-5xl mx-auto">
+          <div className={`text-center mb-16 ${sectionClass('experience')}`}>
+            <span className="text-violet-600 font-medium">Journey</span>
+            <h2 className="text-4xl md:text-5xl font-black mt-2">Work <span className="bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent">Experience</span></h2>
+          </div>
+          <div className="relative">
+            <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-violet-400 via-indigo-400 to-purple-400 md:-translate-x-1/2" />
+            {experiences.map((exp, index) => (
+              <div key={index} className={`relative flex flex-col md:flex-row gap-8 mb-12 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''} ${sectionClass('experience')}`}>
+                <div className="absolute left-8 md:left-1/2 w-4 h-4 rounded-full bg-white border-4 -translate-x-1/2 z-10 shadow-lg" style={{ borderColor: exp.color }} />
+                <div className={`ml-16 md:ml-0 md:w-5/12 ${index % 2 === 0 ? 'md:mr-auto md:pr-12' : 'md:ml-auto md:pl-12'}`}>
+                  <div className="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-all group">
+                    <span className="text-xs font-medium px-2 py-1 rounded-full" style={{ backgroundColor: `${exp.color}20`, color: exp.color }}>{exp.type}</span>
+                    <h3 className="text-xl font-bold text-slate-800 mt-2 group-hover:text-violet-600 transition-colors">{exp.role}</h3>
+                    <p className="text-slate-500 font-medium">{exp.company}</p>
+                    <p className="text-sm text-slate-400 mb-4">{exp.location} • {exp.period}</p>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {exp.tech.map(t => <span key={t} className="px-2 py-1 text-xs rounded-md bg-slate-100 text-slate-600">{t}</span>)}
+                    </div>
+                    <ul className="space-y-2">
+                      {exp.highlights.map((h, i) => (
+                        <li key={i} className="flex items-start gap-2 text-sm text-slate-600">
+                          <span className="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: exp.color }} />
+                          {h}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section id="contact" className="py-24 px-6 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-violet-600 via-indigo-600 to-purple-600" />
+        <div className={`max-w-3xl mx-auto text-center relative z-10 ${sectionClass('contact')}`}>
+          <span className="text-violet-200 font-medium">Let's Connect</span>
+          <h2 className="text-4xl md:text-5xl font-black mt-2 text-white mb-6">Got Data Problems? <span className="text-violet-200">Let's Solve Them.</span></h2>
+          <p className="text-lg text-violet-100 mb-8">Currently looking for full time Data Engineer roles. I bring ETL expertise, cloud experience, and a passion for clean data.</p>
+          <div className="flex flex-wrap gap-4 justify-center mb-8">
+            <a href="mailto:varun1619singh@gmail.com" className="px-8 py-4 bg-white text-violet-600 rounded-full font-semibold hover:shadow-xl hover:-translate-y-1 transition-all">📧 Send Email</a>
+            <a href="https://www.linkedin.com/in/varunsinghtech/" target="_blank" className="px-8 py-4 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-violet-600 transition-all">LinkedIn Profile</a>
+            <a href="https://github.com/Varun1619" target="_blank" className="px-8 py-4 border-2 border-white/50 text-white rounded-full font-semibold hover:bg-white hover:text-violet-600 transition-all">GitHub</a>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-8 px-6 bg-slate-900">
+        <div className="max-w-6xl mx-auto flex flex-wrap justify-between items-center gap-4 text-sm">
+          <div className="text-xl font-black text-white">VS</div>
+          <p className="text-slate-400">Built with React & lots of ☕ © 2025</p>
+          <div className="flex gap-4">
+            {skills.slice(0, 4).map(skill => <SkillIcon key={skill} name={skill} size={20} />)}
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+ReactDOM.render(<Portfolio />, document.getElementById('root'));
+</script>
 </body>
 </html>
